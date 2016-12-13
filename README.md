@@ -28,6 +28,8 @@ https://github.com/omaflak/Image-Kernel-Convolution/blob/master/src/Test.java
 
 # Example
 
+The second image were generated with the same code provided ine the link above.
+
 ## Before
 ![alt tag](https://github.com/omaflak/Image-Kernel-Convolution/blob/master/image.jpg?raw=true)
 ## After
