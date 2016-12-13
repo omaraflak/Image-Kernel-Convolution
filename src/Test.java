@@ -3,8 +3,8 @@
  */
 public class Test {
     public static void main (String [] arg) {
-        String path = "chine.jpg";
-        String path2 = "chine2.jpg";
+        String path = "image.jpg";
+        String path2 = "image2.jpg";
 
         Matrix[] image = Tools.loadImage(path);
         Matrix[] newImage = Tools.applyFilter(image, getTestFilter());
