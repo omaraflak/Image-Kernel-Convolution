@@ -28,4 +28,4 @@ https://github.com/omaflak/Image-Kernel-Convolution/blob/master/src/Test.java
 
 # Example
 
-[[https://github.com/omaflak/Image-Kernel-Convolution/image.jpg]]
+![alt tag](https://github.com/omaflak/Image-Kernel-Convolution/blob/master/image.jpg?raw=true)
