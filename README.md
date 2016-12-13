@@ -1,5 +1,32 @@
 # Image Kernel Convolution
 
-Program to apply filters of your choice to images easily.
+## How to
 
-# 
+    String path = "image.jpg";
+    String path2 = "image2.jpg";
+
+    Matrix[] image = Tools.loadImage(path);
+    Matrix[] newImage = Tools.applyFilter(image, getTestFilter());
+
+    boolean success = Tools.saveImage(newImage, path2, Tools.JPG);
+
+    if(success){
+        System.out.println("Done!");
+    }
+    else{
+        System.out.println("Error happened...");
+    }
+    
+    static Matrix getTestFilter(){
+        double[][] filter = {{0,0,0},
+                             {0,2,0},
+                             {0,0,0}};
+
+        return new Matrix(filter);
+    }
+    
+# Sample
+
+Try for yourself and see!
+
+https://github.com/omaflak/Image-Kernel-Convolution/blob/master/src/Test.java
