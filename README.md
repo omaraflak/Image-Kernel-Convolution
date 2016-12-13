@@ -12,7 +12,7 @@
     
     ...
     
-    static Matrix getTestFilter(){
+    Matrix getTestFilter(){
         double[][] filter = {{0,0,0},
                              {0,2,0},
                              {0,0,0}};
@@ -25,3 +25,7 @@
 Try for yourself and see!
 
 https://github.com/omaflak/Image-Kernel-Convolution/blob/master/src/Test.java
+
+# Example
+
+[[https://github.com/omaflak/Image-Kernel-Convolution/image.jpg]]
