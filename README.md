@@ -8,14 +8,9 @@
     Matrix[] image = Tools.loadImage(path);
     Matrix[] newImage = Tools.applyFilter(image, getTestFilter());
 
-    boolean success = Tools.saveImage(newImage, path2, Tools.JPG);
-
-    if(success){
-        System.out.println("Done!");
-    }
-    else{
-        System.out.println("Error happened...");
-    }
+    Tools.saveImage(newImage, path2, Tools.JPG);
+    
+    ...
     
     static Matrix getTestFilter(){
         double[][] filter = {{0,0,0},
