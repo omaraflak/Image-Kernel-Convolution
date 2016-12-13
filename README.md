@@ -28,4 +28,7 @@ https://github.com/omaflak/Image-Kernel-Convolution/blob/master/src/Test.java
 
 # Example
 
+# Before
 ![alt tag](https://github.com/omaflak/Image-Kernel-Convolution/blob/master/image.jpg?raw=true)
+# After
+![alt tag](https://github.com/omaflak/Image-Kernel-Convolution/blob/master/image2.jpg?raw=true)
