@@ -5,18 +5,16 @@ public class Test {
     public static void main (String [] arg) {
         String path = "image.jpg";
         String path2 = "image2.jpg";
+        String path3 = "image3.jpg";
 
         Matrix[] image = Tools.loadImage(path);
-        Matrix[] newImage = Tools.applyFilter(image, getTestFilter());
+        Matrix[] image2 = Tools.applyFilter(image, getTestFilter());
+        Matrix[] image3 = Tools.applyFilter(image, getNegativeFilter());
 
-        boolean success = Tools.saveImage(newImage, path2, Tools.JPG);
+        Tools.saveImage(image2, path2, Tools.JPG);
+        Tools.saveImage(image3, path3, Tools.JPG);
 
-        if(success){
-            System.out.println("Done!");
-        }
-        else{
-            System.out.println("Error happened...");
-        }
+        System.out.println("Done!");
     }
 
 
@@ -32,6 +30,14 @@ public class Test {
         Matrix m = new Matrix(3,3);
         m.reset(1.0/9.0);
         return m;
+    }
+
+    static Matrix getNegativeFilter(){
+        double[][] filter = {{-0.5,0,0},
+                             {0,-0.5,0},
+                             {0,0,0}};
+
+        return new Matrix(filter);
     }
 
     static Matrix getTestFilter(){
