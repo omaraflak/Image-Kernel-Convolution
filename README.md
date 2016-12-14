@@ -3,13 +3,13 @@
 ## How to
 
     Matrix[] image = Tools.loadImage("image.jpg");
-    Matrix[] newImage = Tools.applyFilter(image, getTestFilter());
+    Matrix[] newImage = Tools.applyFilter(image, testFilter());
 
     Tools.saveImage(newImage, "image2.jpg");
     
     ...
     
-    Matrix getTestFilter(){
+    Matrix testFilter(){
         double[][] filter = {{0,0,0},
                              {0,2,0},
                              {0,0,0}};
