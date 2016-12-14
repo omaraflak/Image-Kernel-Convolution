@@ -34,3 +34,4 @@ The second image were generated with the same code provided in the link above.
 ![alt tag](https://github.com/omaflak/Image-Kernel-Convolution/blob/master/image.jpg?raw=true)
 ## After
 ![alt tag](https://github.com/omaflak/Image-Kernel-Convolution/blob/master/image2.jpg?raw=true)
+![alt tag](https://github.com/omaflak/Image-Kernel-Convolution/blob/master/image3.jpg?raw=true)
