@@ -8,8 +8,8 @@ public class Test {
         String path3 = "image3.jpg";
 
         Matrix[] image = Tools.loadImage(path);
-        Matrix[] image2 = Tools.applyFilter(image, getTestFilter());
-        Matrix[] image3 = Tools.applyFilter(image, getNegativeFilter());
+        Matrix[] image2 = Tools.applyFilter(image, testFilter());
+        Matrix[] image3 = Tools.applyFilter(image, negativeFilter());
 
         Tools.saveImage(image2, path2);
         Tools.saveImage(image3, path3);
@@ -18,7 +18,7 @@ public class Test {
     }
 
 
-    static Matrix getIdentityFilter(){
+    static Matrix identityFilter(){
         double[][] filter = {{0,0,0},
                              {0,1,0},
                              {0,0,0}};
@@ -26,13 +26,13 @@ public class Test {
         return new Matrix(filter);
     }
 
-    static Matrix getBlurFilter(){
+    static Matrix blurFilter(){
         Matrix m = new Matrix(3,3);
         m.reset(1.0/9.0);
         return m;
     }
 
-    static Matrix getNegativeFilter(){
+    static Matrix negativeFilter(){
         double[][] filter = {{-0.5,0,0},
                              {0,-0.5,0},
                              {0,0,0}};
@@ -40,7 +40,7 @@ public class Test {
         return new Matrix(filter);
     }
 
-    static Matrix getTestFilter(){
+    static Matrix testFilter(){
         double[][] filter = {{0,0,0},
                              {0,2,0},
                              {0,0,0}};
