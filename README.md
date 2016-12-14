@@ -2,13 +2,10 @@
 
 ## How to
 
-    String path = "image.jpg";
-    String path2 = "image2.jpg";
-
-    Matrix[] image = Tools.loadImage(path);
+    Matrix[] image = Tools.loadImage("image.jpg");
     Matrix[] newImage = Tools.applyFilter(image, getTestFilter());
 
-    Tools.saveImage(newImage, path2, Tools.JPG);
+    Tools.saveImage(newImage, "image2.jpg", Tools.JPG);
     
     ...
     
