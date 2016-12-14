@@ -11,8 +11,8 @@ public class Test {
         Matrix[] image2 = Tools.applyFilter(image, getTestFilter());
         Matrix[] image3 = Tools.applyFilter(image, getNegativeFilter());
 
-        Tools.saveImage(image2, path2, Tools.JPG);
-        Tools.saveImage(image3, path3, Tools.JPG);
+        Tools.saveImage(image2, path2);
+        Tools.saveImage(image3, path3);
 
         System.out.println("Done!");
     }

@@ -7,10 +7,6 @@ import java.io.IOException;
  * Created by Omar on 13/12/2016.
  */
 public class Tools {
-    public final static int PNG = 0;
-    public final static int JPG = 1;
-    public final static int JPEG = 2;
-
     public static Matrix[] loadImage(String path){
         Matrix[] imageMatrix = new Matrix[3];
         BufferedImage image;
@@ -42,32 +38,6 @@ public class Tools {
         }
     }
 
-    public static boolean saveImage(Matrix[] image, String name, int extension){
-        int height = image[0].getHeight();
-        int width = image[0].getWidth();
-        int rgb;
-
-        BufferedImage imageToSave = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-
-        for (int y=0 ; y<height ; y++) {
-            for (int x=0 ; x<width ; x++) {
-                rgb = (int) image[0].get(y,x);
-                rgb = (rgb << 8) + (int) image[1].get(y,x);
-                rgb = (rgb << 8) + (int) image[2].get(y,x);
-
-                imageToSave.setRGB(x, y, rgb);
-            }
-        }
-
-        String[] ext = {"png", "jpg", "jpeg"};
-        try {
-            ImageIO.write(imageToSave, ext[extension], new File(name));
-            return true;
-        } catch (IOException e) {
-            return false;
-        }
-    }
-
     public static Matrix[] applyFilter(Matrix[] image, Matrix filter){
         int height = image[0].getHeight();
         int width = image[0].getWidth();
@@ -91,5 +61,31 @@ public class Tools {
         }
 
         return newImage;
+    }
+
+    public static boolean saveImage(Matrix[] image, String name){
+        int height = image[0].getHeight();
+        int width = image[0].getWidth();
+        int rgb;
+
+        BufferedImage imageToSave = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+
+        for (int y=0 ; y<height ; y++) {
+            for (int x=0 ; x<width ; x++) {
+                rgb = (int) image[0].get(y,x);
+                rgb = (rgb << 8) + (int) image[1].get(y,x);
+                rgb = (rgb << 8) + (int) image[2].get(y,x);
+
+                imageToSave.setRGB(x, y, rgb);
+            }
+        }
+
+        String extension = name.substring(name.lastIndexOf(".")+1);
+        try {
+            ImageIO.write(imageToSave, extension, new File(name));
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
     }
 }
