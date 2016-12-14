@@ -3,16 +3,12 @@
  */
 public class Test {
     public static void main (String [] arg) {
-        String path = "image.jpg";
-        String path2 = "image2.jpg";
-        String path3 = "image3.jpg";
-
-        Matrix[] image = Tools.loadImage(path);
+        Matrix[] image = Tools.loadImage("image.jpg");
         Matrix[] image2 = Tools.applyFilter(image, testFilter());
         Matrix[] image3 = Tools.applyFilter(image, negativeFilter());
 
-        Tools.saveImage(image2, path2);
-        Tools.saveImage(image3, path3);
+        Tools.saveImage(image2, "image2.jpg");
+        Tools.saveImage(image3, "image3.jpg");
 
         System.out.println("Done!");
     }
