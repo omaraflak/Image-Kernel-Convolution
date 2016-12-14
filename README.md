@@ -5,7 +5,7 @@
     Matrix[] image = Tools.loadImage("image.jpg");
     Matrix[] newImage = Tools.applyFilter(image, getTestFilter());
 
-    Tools.saveImage(newImage, "image2.jpg", Tools.JPG);
+    Tools.saveImage(newImage, "image2.jpg");
     
     ...
     
